@@ -6,21 +6,21 @@ import java.util.List;
 public class TransitionMatrix {
     private final StateSet[][] matrix;
     private final List<String> lineIndexToStateNameMapping;
-    private final List<String> columnIndexToCommandNameMapping;
+    private final List<String> columnIndexToAlphabetNameMapping;
 
-    public TransitionMatrix(String[] states, String[] commands) {
+    public TransitionMatrix(String[] states, String[] alphabets) {
         lineIndexToStateNameMapping = Arrays.asList(states);
-        columnIndexToCommandNameMapping = Arrays.asList(commands);
-        matrix = new StateSet[states.length][commands.length];
+        columnIndexToAlphabetNameMapping = Arrays.asList(alphabets);
+        matrix = new StateSet[states.length][alphabets.length];
     }
 
     public void setState(int line, int column, StateSet state) {
         matrix[line][column] = state;
     }
 
-    public StateSet getTransitionState(String state, String command) {
+    public StateSet getTransitionState(String state, String alphabet) {
         int line = lineIndexToStateNameMapping.indexOf(state);
-        int column = columnIndexToCommandNameMapping.indexOf(command);
+        int column = columnIndexToAlphabetNameMapping.indexOf(alphabet);
         return matrix[line][column];
     }
 

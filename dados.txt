@@ -1,0 +1,16 @@
+q1 q2 q3 q4 # Linha com o conjunto de estados, separados por espa¸co
+0 1 # Linha com o alfabeto, s´ımbolos separados por espa¸co
+q1 # inicio da descricao da matriz linha 0, coluna 0
+q1 q2 # linha 0, coluna 1
+* # linha 0, coluna 2
+q3 # matriz linha 1, coluna 0
+*
+q3
+* # matriz linha 2, coluna 0
+q4
+*
+q4 # matriz linha 3, coluna 0
+q4
+*
+q1 # estado inicial
+q4 # estados finais
